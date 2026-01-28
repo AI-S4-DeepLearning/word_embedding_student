@@ -34,15 +34,13 @@ In deze opdracht gaan we onderzoeken hoe we deze modellen kunnen gebruiken om te
 
 Voor het bepalen van de afstand tussen twee vectoren maken we gebruik van de _cosine similarity_. Deze is gegeven met de volgende formule:
 
-$$
-   \cos(\theta)=\frac{\langle a \mid b \rangle}{\|a\|\|b\|}=\frac{\sum_{i=1}^{n} a_i b_i}{\sqrt{\sum_{i=1}^{n} a_i^2}\sqrt{\sum_{i=1}^{n} b_i^2}}
-$$
+$$\cos(\theta)=\frac{\langle a \mid b \rangle}{\|a\|\|b\|}=\frac{\sum_{i=1}^{n} a_i b_i}{\sqrt{\sum_{i=1}^{n} a_i^2}\sqrt{\sum_{i=1}^{n} b_i^2}}$$
 
 Hierbij is $n$ het aantal dimensies van beide vectoren.
 
 Kenmerken:
 - Als vectoren $\vec{a}$ en $\vec{b}$ identiek zijn, dan geldt $\cos(\theta) = 1$.
-- Als vectoren $\vec{a}$ en $\vec{b}$  tegengesteld zijn, oftewel $\vec{a} = -\vec{b}$, dan geldt $\cos(\theta) = -1$.
+- Als vectoren $\vec{a}$ en $\vec{b}$  tegengesteld zijn, oftewel $\vec{a} = - \vec{b}$, dan geldt $\cos(\theta) = -1$.
 - Als vectoren $\vec{a}$ en $\vec{b}$ orthogonaal zijn (met andere woorden, ze staan haaks op elkaar), dan geldt $\cos(\theta) = 0$.
 - Er geldt dus dat waarden tussen 0 en 1 _gelijkenis_ aangeven en waarden tussen −1 en 0 _niet-gelijkenis_ aangeven.
 
