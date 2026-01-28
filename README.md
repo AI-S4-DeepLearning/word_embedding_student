@@ -23,12 +23,12 @@ In deze opdracht gaan we onderzoeken hoe we deze modellen kunnen gebruiken om te
 
 2. Lees het bestand `en_embeddings.p` in met onderstaande code. Deze dataset is een selectie van de complete [Google News](https://code.google.com/archive/p/word2vec) word embedding dataset, die we hebben verkleind voor deze opdracht. Verken deze dataset en licht kort toe wat erin zit.
 
-   ```py
-   import pickle
+```py
+import pickle
 
-   with open('data/en_embeddings.p', 'rb') as file:
-      word_embeddings = pickle.load(file)
-   ```
+with open('data/en_embeddings.p', 'rb') as file:
+   word_embeddings = pickle.load(file)
+```
 
 ### Afstandsmaat
 
@@ -39,10 +39,12 @@ $$\cos(\theta)=\frac{\langle a \mid b \rangle}{\|a\|\|b\|}=\frac{\sum_{i=1}^{n} 
 Hierbij is $n$ het aantal dimensies van beide vectoren.
 
 Kenmerken:
+
 - Als vectoren $\vec{a}$ en $\vec{b}$ identiek zijn, oftewel $\vec{a}$ = $\vec{b}$, dan geldt $\cos(\theta) = 1$.
 - Als vectoren $\vec{a}$ en $\vec{b}$  tegengesteld zijn, oftewel $\vec{a}$ = &ndash; $\vec{b}$, dan geldt $\cos(\theta) = -1$.
 - Als vectoren $\vec{a}$ en $\vec{b}$ orthogonaal zijn (met andere woorden, ze staan haaks op elkaar), dan geldt $\cos(\theta) = 0$.
 - Er geldt dus dat waarden tussen 0 en 1 _gelijkenis_ aangeven en waarden tussen −1 en 0 _niet-gelijkenis_ aangeven.
+
 
 
 3. Schrijf een functie `cos_similarity(a, b)` die de cosine similarity tussen twee (woord)vectoren berekent.
