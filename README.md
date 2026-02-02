@@ -91,7 +91,9 @@ Als het niet lukt om binnen een redelijk tijd tot een goede score te komen, prob
 
 Het zoeken in een hoogdimensionale vectorruimte met een groot aantal vectorrepresentaties is een complexe operatie. Een manier om dit te versimpelen is door gebruik te maken van _locality sensitive hashing_ (LSH), waarbij de ruimte middels een hash wordt opgedeeld in _buckets_ en alleen in één van die buckets wordt gezocht naar nabijgelegen _neighbours_. De winst in snelheid gaat ten koste van de nauwkeurigheid, want het beste antwoord hoeft niet in het bezochte deelgebied te liggen.
 
-In de module `lshash.py` is een eenvoudige implementatie van LSH gegeven. Met `vector_hash()` wordt een hash gemaakt van een vector. De functie `make_hash_table()` maakt een _hash table_ van een gegeven lijst vectoren:
+6. In de module `lshash.py` is een raamwerk voor LSH gegeven. Schrijf een functies `vector_hash()` en `make_hash_table()`.  
+Met `vector_hash()` moet een hash gemaakt worden van een vector.  
+De functie `make_hash_table()` moet een _hash table_ maken van een gegeven lijst vectoren:
 
    Input:
    - `vecs`: list van vectoren met gelijke dimensie
@@ -102,7 +104,7 @@ In de module `lshash.py` is een eenvoudige implementatie van LSH gegeven. Met `v
    - `lookup`: de index die de vectoren in `buckets` relateerd aan de positie in de originele lijst met vectoren `vecs`
    - `planes`: de lijst met vectoren die de vectorruimte opdeeld, zodat er `n_buckets` deelruimtes ontstaan -- hiervoor zijn $\log_{2}(\mathtt{n\_buckets})$ van deze vectoren nodig
 
-6. Pas locality-sensitive hashing toe bij het voorspellen van de landen-hoofdsteden-combinaties. Welke winst in snelheid behaal je en wat lever je in qua _accuracy_?
+7. Pas locality-sensitive hashing toe bij het voorspellen van de landen-hoofdsteden-combinaties. Welke winst in snelheid behaal je en wat lever je in qua _accuracy_?
 
 
 ## Deel II: Language models
@@ -126,7 +128,7 @@ predominates the whole of her sex.
 
 #### Understanding
 
-1. Analyseer de orinele tekst in `data/holmes.txt`. Bedenk welke data bruikbaar is, welke bijzonderheden er zijn in de tekst en wat er opgeschoond moet worden.
+1. Analyseer de originele tekst in `data/holmes.txt`. Bedenk welke data bruikbaar is, welke bijzonderheden er zijn in de tekst en wat er opgeschoond moet worden.
 
 #### Cleaning
 
